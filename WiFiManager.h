@@ -537,6 +537,9 @@ class WiFiManager
     const byte    DNS_PORT                = 53;
     String        _apName                 = "no-net";
     String        _apPassword             = "";
+  public:                                       // FIX My
+    String        _auth                   = ""; // FIX My,储存密钥。var temp key
+  private:                                      // FIX My
     String        _ssid                   = ""; // var temp ssid
     String        _pass                   = ""; // var temp psk
     String        _defaultssid            = ""; // preload ssid
@@ -594,7 +597,7 @@ class WiFiManager
     boolean       _showBack               = false; // show back button
     boolean       _enableConfigPortal     = true;  // FOR autoconnect - start config portal if autoconnect failed
     boolean       _disableConfigPortal    = true;  // FOR autoconnect - stop config portal if cp wifi save
-    String        _hostname               = "";    // hostname for esp8266 for dhcp, and or MDNS
+    String        _hostname               = "u8's ESP32";    // hostname for esp8266 for dhcp, and or MDNS
 
     const char*   _customHeadElement      = ""; // store custom head element html from user isnide <head>
     const char*   _customMenuHTML         = ""; // store custom head element html from user inside <>
